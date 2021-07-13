@@ -1,3 +1,7 @@
+-- ok
+if game:GetService("CoreGui"):FindFirstChild("FinityUI") then
+   game:GetService("CoreGui").FinityUI:Destroy()
+end
 --[[
 	 ______ _____ _   _ _____ _________     __
 	|  ____|_   _| \ | |_   _|__   __\ \   / /
