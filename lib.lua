@@ -567,7 +567,7 @@ function finity.new(isdark, gprojectName, thinProject,ModifiedSize)
 					-- 1/31/2022 (Fixed font for labels, It's bold now!
 					Font = Enum.Font.GothamSemibold,
 					-- 1/31/2022 (Added Line Height Property, For change logs, but i could just add it as an argument on line 549 but whatever
-					LineHeight = 0.5
+					LineHeight = 0.5,
 					TextColor3 = theme.text_color,
 					TextSize = 13,
 					Text = name,
