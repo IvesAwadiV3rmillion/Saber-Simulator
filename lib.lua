@@ -1,8 +1,4 @@
--- ok
-if game:GetService("CoreGui"):FindFirstChild("FinityUI") then
-   game:GetService("CoreGui").FinityUI:Destroy()
-end
--- kekw
+
 --[[
 	 ______ _____ _   _ _____ _________     __
 	|  ____|_   _| \ | |_   _|__   __\ \   / /
@@ -20,6 +16,7 @@ end
 	Author: 
 		detourious @ v3rmillion.net
 		deto#7612  @ discord.gg
+                Ives#0418 @ discord.gg
 					
 --]]
 
@@ -146,11 +143,16 @@ function finity.new(isdark, gprojectName, thinProject,ModifiedSize)
 	local self2 = finityObject
 	local self = finity
 
-	if not finity.gs["RunService"]:IsStudio() and self.gs["CoreGui"]:FindFirstChild("\
-			") then
-		warn("finity:", "instance already exists in coregui!")
-		
-		return
+	for i,v in pairs(self.gs["CoreGui"]:GetChildren()) do
+	    if v:IsA(v, "ScreenGui") then
+		for i2, v2 in pairs(v:GetChildren()) do
+		    -- 'Container' (Since Finity uses this)
+		    if (typeof(v2) == "Instance" and v2.Name == "Container") then
+			v2.Parent:Destroy()
+			break;
+		    end
+		end
+	    end
 	end
 
 	local theme = finity.theme
