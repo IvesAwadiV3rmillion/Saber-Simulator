@@ -500,7 +500,7 @@ function finity.new(isdark, gprojectName, thinProject,ModifiedSize)
 			end
 		end
 
-		function category:Sector(name,)
+		function category:Sector(name)
 			local sector = {}
 
 			sector.frame = finity:Create("Frame", {
