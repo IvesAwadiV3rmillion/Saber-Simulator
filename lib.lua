@@ -146,7 +146,8 @@ function finity.new(isdark, gprojectName, thinProject,ModifiedSize)
 	local self2 = finityObject
 	local self = finity
 
-	if not finity.gs["RunService"]:IsStudio() and self.gs["CoreGui"]:FindFirstChild("FinityUI") then
+	if not finity.gs["RunService"]:IsStudio() and self.gs["CoreGui"]:FindFirstChild("\
+			") then
 		warn("finity:", "instance already exists in coregui!")
 		
 		return
@@ -220,12 +221,15 @@ function finity.new(isdark, gprojectName, thinProject,ModifiedSize)
 			end
 		end
 	end)
-
-	self2.userinterface = self:Create("ScreenGui", {
-		Name = "FinityUI",
+        -- 1/31/2022 (Remore 'FinityUI' Name, now generate random ids so the devs dont bother me smh
+	local HttpService = finity.gs["HttpService"]
+	if HttpService then
+	    self2.userinterface = self:Create("ScreenGui", {
+		Name = HttpService:GenerateGUID(false),
 		ZIndexBehavior = Enum.ZIndexBehavior.Global,
 		ResetOnSpawn = false,
-	})
+	    })
+	end
 
 	self2.container = self:Create("ImageLabel", {
 		Draggable = true,
