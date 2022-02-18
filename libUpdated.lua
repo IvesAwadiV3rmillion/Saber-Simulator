@@ -1065,7 +1065,7 @@ function finity.new(isdark, gprojectName, thinProject)
 				function RefreshFunctions:SetValue(value)
 					local size = math.clamp(value - cheat.sliderbar.AbsolutePosition.X, 0, 150)
 					local percent = size / 150
-					local perc = default/maximum
+					local perc = default / maximum
 					cheat.value = math.floor((minimum + (maximum - minimum) * percent) * 100) / 100
 					game:GetService("TweenService"):Create(cheat.visiframe, TweenInfo.new(0.1), {
 						Size = UDim2.new(perc, 0, 1, 0),
@@ -1078,6 +1078,8 @@ function finity.new(isdark, gprojectName, thinProject)
 				function RefreshFunctions:Refresh(name)
 					cheat:RefreshBase(name)
 				end
+				
+				return RefreshFunctions
 			end
 			
 			function sector:Dropdown(name, data, callback)
@@ -1337,6 +1339,8 @@ function finity.new(isdark, gprojectName, thinProject)
 				
 				cheat.background.Parent = cheat.container
 				cheat.textbox.Parent = cheat.container
+				
+				return cheat
 			end
 			
 			function sector:Button(name, buttontext, callback)
