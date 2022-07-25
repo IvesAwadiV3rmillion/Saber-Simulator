@@ -164,7 +164,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 	local finityObject = {}
 	local self2 = finityObject
 	local self = finity
-    
+
 	-- Destroy Ui
     for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
         if v:IsA(v, "ScreenGui") then
@@ -780,7 +780,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 					ZIndex = 2,
 					Font = Enum.Font.GothamSemibold,
 					TextColor3 = theme.text_color,
-					TextSize = 13,
+					TextSize = 14,
 					Text = FrameName,
 					TextXAlignment = Enum.TextXAlignment.Left
 				})
