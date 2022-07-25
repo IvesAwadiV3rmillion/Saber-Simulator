@@ -905,7 +905,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 			
 			function sector:Slider(name, data, callback)
-				local cheat = CreateUiContentFrame(name)
+				local cheat = CreateUiContentFrame(name, Enum.Font.Gotham)
 				
 				cheat.value = 0
 				
