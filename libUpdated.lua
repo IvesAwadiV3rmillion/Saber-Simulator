@@ -1279,7 +1279,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 			
 			function sector:Textbox(name, placeholder, callback)
-				local cheat = CreateUiContentFrame(name)
+				local cheat = CreateUiContentFrame(name, Enum.Font.Gotham);
 				
 				cheat.background = finity:Create("ImageLabel", {
 					Name = "Background",
