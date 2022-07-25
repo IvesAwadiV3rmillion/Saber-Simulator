@@ -807,7 +807,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 			
 			function sector:Toggle(name, callback, status)
-				local cheat = CreateUiContentFrame(name, Enum.Font.GothamBold)
+				local cheat = CreateUiContentFrame(name, Enum.Font.Gotham)
 				
 				if status then
 					cheat.value = status
@@ -1406,7 +1406,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 			
 			function sector:Label(text)
-				local cheat = CreateUiContentFrame(text)
+				local cheat = CreateUiContentFrame(text, Enum.Font.Gotham)
 				
 				local RefreshFunctions = {}
 				
