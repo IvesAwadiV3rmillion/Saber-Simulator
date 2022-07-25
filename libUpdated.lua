@@ -1090,7 +1090,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 			
 			function sector:Dropdown(name, data, callback)
-				local cheat = CreateUiContentFrame(name)
+				local cheat = CreateUiContentFrame(name, Enum.Font.Gotham);
 				
 				if data then
 					cheat.value = data[1]
@@ -1351,7 +1351,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 			
 			function sector:Button(name, buttontext, callback)
-				local cheat = CreateUiContentFrame(name)
+				local cheat = CreateUiContentFrame(name, Enum.Font.Gotham)
 				
 				cheat.background = finity:Create("ImageLabel", {
 					Name = "Background",
