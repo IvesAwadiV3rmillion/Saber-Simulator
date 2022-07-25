@@ -778,7 +778,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 					BackgroundTransparency = 1,
 					Size = UDim2.new(1, 0, 1, 0),
 					ZIndex = 2,
-					Font = Enum.Font.GothamSemibold,
+					Font = Enum.Font.GothamMedium,
 					TextColor3 = theme.text_color,
 					TextSize = 14,
 					Text = FrameName,
