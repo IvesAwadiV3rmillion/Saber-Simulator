@@ -160,7 +160,7 @@ function finity:addShadow(object, transparency)
 	shadow.Parent = object
 end
 
-function finity.new(isdark, gprojectName, thinProject)
+function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 	local finityObject = {}
 	local self2 = finityObject
 	local self = finity
@@ -261,8 +261,8 @@ function finity.new(isdark, gprojectName, thinProject)
 		Modal = false;
 	}) self2.modal.Parent = self2.userinterface;
 	
-	if thinProject and typeof(thinProject) == "UDim2" then
-		self2.container.Size = thinProject
+	if ModifizedSize and typeof(ModifizedSize) == "UDim2" then
+		self2.container.Size = ModifizedSize;
 	end
 	
 	-- Custom Drag --
@@ -728,7 +728,7 @@ function finity.new(isdark, gprojectName, thinProject)
 				BackgroundTransparency = 1,
 				Size = UDim2.new(1, -5, 0, 25),
 				ZIndex = 2,
-				Font = Enum.Font.GothamBlack,
+				Font = Enum.Font.GothamSemibold,
 				TextColor3 = theme.text_color,
 				TextSize = 15,
 				TextXAlignment = Enum.TextXAlignment.Left,
@@ -771,7 +771,7 @@ function finity.new(isdark, gprojectName, thinProject)
 					BackgroundTransparency = 1,
 					Size = UDim2.new(1, 0, 1, 0),
 					ZIndex = 2,
-					Font = Enum.Font.Gotham,
+					Font = Enum.Font.GothamSemibold,
 					TextColor3 = theme.text_color,
 					TextSize = 13,
 					Text = FrameName,
