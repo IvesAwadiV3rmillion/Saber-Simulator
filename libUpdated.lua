@@ -164,12 +164,19 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 	local finityObject = {}
 	local self2 = finityObject
 	local self = finity
-	
-	if not game:GetService("RunService"):IsStudio() and game:GetService("CoreGui"):FindFirstChild("FinityUI") then
-		warn("finity:", "instance already exists in coregui!")
-		
-		return
-	end
+    
+	-- Destroy Ui
+    for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+        if v:IsA(v, "ScreenGui") then
+            for i2, v2 in pairs(v:GetChildren()) do
+                -- 'Container' (Since Finity uses this)
+                if (typeof(v2) == "Instance" and v2.Name == "Container") then
+                    v2.Parent:Destroy()
+                    break;
+                end
+            end
+        end
+    end
 	
 	local theme = finity.theme
 	local projectName = false
@@ -356,7 +363,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 		Position = UDim2.new(0, 30, 0, 0),
 		Text = "Press '".. string.sub(tostring(self.ToggleKey), 14) .."' to hide this menu",
 		Font = Enum.Font.GothamSemibold,
-		TextSize = 13,
+		TextSize = 15,
 		TextXAlignment = Enum.TextXAlignment.Left,
 		BackgroundTransparency = 1,
 		TextColor3 = theme.text_color,
