@@ -760,7 +760,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			sector.title.Parent = sector.frame
 			
 			-- Contents --
-			local function CreateUiContentFrame(FrameName)
+			local function CreateUiContentFrame(FrameName, FontChosen)
 				local ContentItems = {}
 				ContentItems.value = nil
 				
@@ -778,7 +778,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 					BackgroundTransparency = 1,
 					Size = UDim2.new(1, 0, 1, 0),
 					ZIndex = 2,
-					Font = Enum.Font.GothamMedium,
+					Font = FontChosen or Enum.Font.GothamMedium,
 					TextColor3 = theme.text_color,
 					TextSize = 14,
 					Text = FrameName,
@@ -807,7 +807,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 			
 			function sector:Toggle(name, callback, status)
-				local cheat = CreateUiContentFrame(name)
+				local cheat = CreateUiContentFrame(name, Enum.Font.GothamBold)
 				
 				if status then
 					cheat.value = status
