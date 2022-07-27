@@ -782,6 +782,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 					TextColor3 = theme.text_color,
 					TextSize = 14,
 					Text = FrameName,
+					TextWrapped = true,
 					TextXAlignment = Enum.TextXAlignment.Left
 				})
 				
