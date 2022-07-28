@@ -918,6 +918,8 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 				function RefreshLibrary:Refresh(text)
 					cheat:RefreshBase(text)
 				end
+
+				return RefreshLibrary
 			end
 			
 			function sector:Slider(name, data, callback)
