@@ -909,6 +909,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 
 					if cheat.value then
 						game:GetService("TweenService"):Create(cheat.outerbox, TweenInfo.new(0.2), {ImageColor3 = theme.checkbox_checked}):Play()
+						game:GetService("TweenService"):Create(cheat.checkboxbutton, TweenInfo.new(0.2), {ImageColor3 = theme.checkbox_checked}):Play()
 					else
 						game:GetService("TweenService"):Create(cheat.outerbox, TweenInfo.new(0.2), {ImageColor3 = theme.checkbox_outer}):Play()
 						game:GetService("TweenService"):Create(cheat.checkboxbutton, TweenInfo.new(0.2), {ImageColor3 = theme.checkbox_inner}):Play()
