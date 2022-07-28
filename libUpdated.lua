@@ -899,6 +899,21 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 				cheat.outerbox.Parent = cheat.container
 				
 				local RefreshLibrary = {}
+
+				function RefreshLibrary:SetValue(value)
+					cheat.value = value
+
+					if callback then
+						coroutine.wrap(callback)(cheat.value)
+					end
+
+					if cheat.value then
+						game:GetService("TweenService"):Create(cheat.outerbox, TweenInfo.new(0.2), {ImageColor3 = theme.checkbox_checked}):Play()
+					else
+						game:GetService("TweenService"):Create(cheat.outerbox, TweenInfo.new(0.2), {ImageColor3 = theme.checkbox_outer}):Play()
+						game:GetService("TweenService"):Create(cheat.checkboxbutton, TweenInfo.new(0.2), {ImageColor3 = theme.checkbox_inner}):Play()
+					end
+				end
 				
 				function RefreshLibrary:Refresh(text)
 					cheat:RefreshBase(text)
@@ -1615,7 +1630,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 	end
 	
 	function self2:Settings()
-		local SettingsCatagory = self2:Category("SETTINGS")
+		local SettingsCatagory = self2:Category("Settings")
 		
 		local Options = SettingsCatagory:Sector("UI Options")
 		Options:Keybind('Toggle Key', finityData.ToggleKey, nil, function(key)
