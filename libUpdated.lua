@@ -232,7 +232,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 	end
 
 	self2.ChangeTitle = function(text)
-		return self2.tip.Text = text
+		self2.tip.Text = text
 	end
 
 	self2.ChangeBackgroundImage = function(ImageID, Transparency)
