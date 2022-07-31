@@ -1,0 +1,12 @@
+{
+    "defaultContent": {
+        "Version": "4.0",
+        "Keybinds": {
+            "ToggleKey": "RightShift"
+        }
+    },
+    "ChangeLogs": [
+        "Added nothing!",
+        "Added new settings!"
+    ]
+}
