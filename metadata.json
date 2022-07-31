@@ -1,6 +1,10 @@
 {
     "defaultContent": {
-        "Version": "4.0",
+        "Version": "4.1",
+        "Farming" : {
+            "AutoSwing": true,
+            "AutoSell" : false
+        },
         "Keybinds": {
             "ToggleKey": "RightShift"
         }
