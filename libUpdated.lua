@@ -1621,6 +1621,8 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 
 				cheat.background.Parent = cheat.container
 				cheat.button.Parent = cheat.container
+				
+				return cheat
 			end
 
 			return sector
