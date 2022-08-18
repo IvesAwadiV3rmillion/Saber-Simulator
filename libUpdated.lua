@@ -1437,7 +1437,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 			end
 
 			function sector:Keybind(name, bind, callback, changedcallback, BindAction)
-				local cheat = CreateUiContentFrame(name)
+				local cheat = CreateUiContentFrame(name, Enum.Font.Gotham)
 
 				local callback_bind = tostring(USERINPUTSERVICE:GetStringForKeyCode(bind))
 				if callback_bind == "" then
