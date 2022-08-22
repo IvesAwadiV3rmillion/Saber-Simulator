@@ -196,7 +196,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 	local finityData
 	finityData = {
 		UpConnection = nil,
-		ToggleKey = Enum.KeyCode.Home,
+		ToggleKey = Enum.KeyCode.RightShift,
 	}
 
 
@@ -367,7 +367,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 		Position = UDim2.new(0, 30, 0, 0),
 		Text = "Press '".. string.sub(tostring(self.ToggleKey), 14) .."' to hide this menu",
 		Font = Enum.Font.GothamSemibold,
-		TextSize = 15,
+		TextSize = 13,
 		RichText = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
 		BackgroundTransparency = 1,
