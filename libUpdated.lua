@@ -196,7 +196,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 	local finityData
 	finityData = {
 		UpConnection = nil,
-		ToggleKey = Enum.KeyCode.Home,
+		ToggleKey = Enum.KeyCode.RightShift,
 	}
 
 
