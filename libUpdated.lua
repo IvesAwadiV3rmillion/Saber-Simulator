@@ -368,6 +368,7 @@ function finity.new(isdark, gprojectName, thinProject, ModifizedSize)
 		Text = "Press '".. string.sub(tostring(self.ToggleKey), 14) .."' to hide this menu",
 		Font = Enum.Font.GothamSemibold,
 		TextSize = 15,
+		RichText = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
 		BackgroundTransparency = 1,
 		TextColor3 = theme.text_color,
